@@ -1,0 +1,63 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ns="http://www.iata.org/IATA/EDIST/2017.2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <SeatAvailabilityRQ Version="17.2" PrimaryLangID="SV" AltLangID="EN" xmlns="http://www.iata.org/IATA/EDIST/2017.2">
+         <Document>
+            <Name>BA</Name>
+         </Document>
+           <Party>
+            <Sender>
+               <TravelAgencySender>
+                <Type>Online</Type>
+                  <Contacts>
+                     <Contact>
+                        <AddressContact>
+                           <!--Provide address details of the agent only when the form of payment is BSP (CASH)-->
+                           <Street>Beeches Apartment</Street>
+                           <Street>200 Lampton Road</Street>
+                           <CityName>LON</CityName>
+                           <StateProv>NY</StateProv>
+                           <PostalCode>TW345RT</PostalCode>
+                           <CountryCode>GB</CountryCode>
+                        </AddressContact>
+                     </Contact>
+                     <Contact>
+                        <EmailContact>
+                           <Address>AA.BB@ba.com</Address>
+                        </EmailContact>
+                     </Contact>
+                  </Contacts>
+                  <IATA_Number>00000000</IATA_Number>
+                  <AgencyID>Test</AgencyID>
+               </TravelAgencySender>
+            </Sender>       
+         </Party>
+         <Query>
+            <Offer OfferID="OF-962bddbd-7c24-4530-bb2d-766875788d62" Owner="BA" ResponseID="op08.tx-08-201-4779ebb1-3e72-4b33-8300-53c05a33d93c"/>
+         </Query>
+         <DataLists>
+            <PassengerList>
+                  <Passenger PassengerID="SH1">
+                     <PTC>ADT</PTC>
+                     <Individual>
+                        <Birthdate>1970-01-01</Birthdate>
+                        <NameTitle>MR</NameTitle>
+                        <GivenName>One</GivenName>
+                        <Surname>Alpha</Surname>
+                     </Individual>                  
+                  </Passenger>
+                  <Passenger PassengerID="SH2">
+                     <PTC>CHD</PTC>
+                     <Individual>
+                        <Birthdate>2011-11-12</Birthdate>
+                        <NameTitle>MR</NameTitle>
+                        <GivenName>Two</GivenName>
+                        <Surname>Beta</Surname>
+                     </Individual>
+                  </Passenger>               
+               </PassengerList>
+
+         </DataLists>
+      </SeatAvailabilityRQ>
+   </soapenv:Body>
+</soapenv:Envelope>
